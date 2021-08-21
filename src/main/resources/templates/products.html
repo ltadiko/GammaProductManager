@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Find products in Store </title>
+    <link rel="stylesheet" th:href="@{/styles/main.css}"/>
+    <script th:src="@{/js/action.js}" type="text/javascript"></script>
+    <script th:inline="javascript">
+    </script>
+
+</head>
+<p>Welcome to <span application th:text="${appName}">Application</span></p>
+<div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="products">Products</a>
+    <a href="addStore">Add Store</a>
+    <a href="addProduct">Add Product</a>
+</div>
+<table align="center">
+    <tr>
+        <td>Enter StoreId (*) :</td>
+        <td>
+            <input id="storeId" name="lat" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input th:onclick="getProducts();" type="button" value="Submit"/>
+        </td>
+    </tr>
+</table>
+
+<p>Product Details : </p>
+
+<div>
+    <table id="storeTable">
+        <thead>
+        <tr>
+            <th>ProductId</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>StoreId</th>
+            <th>Store City</th>
+            <th>Store postcode</th>
+            <th>Store street</th>
+            <th>Article Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div>
+        <!--        <p>Welcome to <span th:text="${stores}">Our App</span></p>-->
+
+
+        </body>
+</html>

@@ -39,4 +39,48 @@ public class HomeControllerMvCTest implements WithBDDMockito {
         assertEquals(200, response.getStatus());
         assertNotNull(response.getContentAsString());
     }
+
+    @Test
+    @DisplayName("SHOULD return Product page")
+    void getProductsPage_200() throws Exception {
+        // given
+
+        // when
+        MockHttpServletResponse response = mockMvc
+                .perform(get("/products"))
+                .andReturn()
+                .getResponse();
+        // then
+        assertEquals(200, response.getStatus());
+        assertNotNull(response.getContentAsString());
+    }
+    @Test
+    @DisplayName("SHOULD return add Store page")
+    void addStorePage_200() throws Exception {
+        // given
+
+        // when
+        MockHttpServletResponse response = mockMvc
+                .perform(get("/addStore"))
+                .andReturn()
+                .getResponse();
+        // then
+        assertEquals(200, response.getStatus());
+        assertNotNull(response.getContentAsString());
+    }
+    @Test
+    @DisplayName("SHOULD return add product page")
+    void addProductPage_200() throws Exception {
+        // given
+
+        // when
+        MockHttpServletResponse response = mockMvc
+                .perform(get("/addProduct"))
+                .andReturn()
+                .getResponse();
+        // then
+        assertEquals(200, response.getStatus());
+        assertNotNull(response.getContentAsString());
+    }
+
 }
